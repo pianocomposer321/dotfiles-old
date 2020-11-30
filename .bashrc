@@ -139,4 +139,4 @@ export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/nu
 
 export FZF_DEFAULT_COMMAND='fdfind --type f'
 
-if [ -z "$TMUX" ]; then tmux; fi
+# if [ -z "$TMUX" ]; then tmux; fi
