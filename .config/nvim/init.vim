@@ -11,6 +11,13 @@
 " Plugins                                                             *plugins*
 " -----------------------------------------------------------------------------
 
+" delete these lines {
+" let g:netrw_banner = 0
+" let g:netrw_liststyle = 3
+" let g:netrw_browse_split = 2
+" let g:netrw_winsize = 20
+" }
+
 packadd termdebug
 
 call plug#begin()
@@ -97,7 +104,7 @@ Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 let g:NERDTreeWinPos = "right"
 let g:NERDTreeQuitOnOpen = 1
-let g:NERDTreeHijackNetrw = 1
+let g:NERDTreeHijackNetrw = 0
 let g:NERDTreeCreatePrefix='silent keepalt keepjumps'
 
 Plug 'tpope/vim-commentary'
@@ -230,34 +237,34 @@ noremap <silent> <leader>o :exec 'botright Ttoggle resize=' . g:term_height<cr>
 " General Settings                                           *general_settings*
 " -----------------------------------------------------------------------------
 
-autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
-set lbr
-set fsync
-set undofile
-set backup
-set backupdir-=.
-set autoread
-set foldlevel=99
-set exrc
-set wildmenu
-set wildmode=longest:full,full
-set pumheight=5
-set ignorecase
-set smartcase
-set mouse=a
-set cursorline
-set nu
-set noshowmode
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-set signcolumn=yes
-set showtabline=2
-set splitright
-set inccommand=nosplit
-set termguicolors
-set completeopt=menuone,noinsert,noselect
+autocmd BufNewFile,BufRead * setlocal formatoptions-=cro  " Disable adding comment character(s) on pressing o/O in normal mode or CR in insert mode
+set lbr " ................................................. Don't break lines in the middle of a word
+set fsync " ............................................... Ensures that files are safely written
+set undofile " ............................................ Persist undo history after exiting
+set backup " .............................................. Make backups of files (has saved my back a few times when I tried to remove the wrong end of a soft link)
+set backupdir-=. " ........................................ Only save backups to ~/.local/share/nvim/backup, not current working directory
+set autoread " ............................................ Automatically update files that have been changed outside of vim
+set foldlevel=99 " ........................................ Open all folds by default
+set exrc " ................................................ Enable project-specific vim config files (e.g. .nvimrc)
+set wildmenu " ............................................ Enable tab-menu for ex commands
+set wildmode=longest:full,full " .......................... Automatically select best match in wildmenu
+set pumheight=5 " ......................................... Make completion menu max 5 lines high
+set ignorecase " .......................................... Make searches case insensitive
+set smartcase " ........................................... Make searches that contain capitals case sensitive
+set mouse=a " ............................................. Enable mouse (I don't use this much, but it's nice for it to be here when I expect it to be)
+set cursorline " .......................................... Show which line the cursor is on by highlighting it or underlining it, depending on colorscheme
+set nu " .................................................. Show line numbers
+set noshowmode " .......................................... Disable the -- INSERT -- indicator - AirLine replaces this functionality
+set tabstop=4 " ........................................... The width of literal tab characters (doesn't really matter if expandtab is enabled)
+set softtabstop=4 " ....................................... The ammount of spaces pressing the tab key inserts and backspace removes when expandtab is enabled
+set shiftwidth=4 " ........................................ The ammount of spaces > inserts and < removes in normal mode when expandtab is enabled
+set expandtab " ........................................... Convert tabs to spaces (the number of spaces is determined by softtabstop option)
+set signcolumn=yes " ...................................... Show signcolumn by default (so that error indicators do not shift text over)
+set showtabline=2 " ....................................... Always show tabline, even when there's only one tab open
+set splitright " .......................................... Split to the right
+set inccommand=nosplit " .................................. Incremetally show results for supported commands (currently only :s supports this functionality)
+set termguicolors " ....................................... Enable true color in the terminal
+set completeopt=menuone,noinsert,noselect " ............... Show menu even when there is only one match; Do not insert the text from the menu until selected; Don't select a match untill I press <C-n> (which I have mapped to <TAB>)
 
 " -----------------------------------------------------------------------------
 " Plugin Mappings and Settings                   *plugin_mappings_and_settings*
