@@ -133,6 +133,8 @@ alias pip="pip3"
 alias nvim="~/.local/nvim/bin/nvim"
 alias nload="nvim +LoadSession"
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias mkdir='mkdir -p'
+alias reload='source ~/.bashrc'
 
 export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
 # export LIBGL_ALWAYS_INDIRECT=1

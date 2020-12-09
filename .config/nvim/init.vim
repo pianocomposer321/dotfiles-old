@@ -11,13 +11,6 @@
 " Plugins                                                             *plugins*
 " -----------------------------------------------------------------------------
 
-" delete these lines {
-" let g:netrw_banner = 0
-" let g:netrw_liststyle = 3
-" let g:netrw_browse_split = 2
-" let g:netrw_winsize = 20
-" }
-
 packadd termdebug
 
 call plug#begin()
@@ -136,7 +129,10 @@ Plug 'pianocomposer321/project-templates.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'mattn/emmet-vim'
 " let g:user_emmet_leader_key=';'
 let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+augroup inline
+    au!
+    au FileType html,css EmmetInstall
+augroup end
 " autocmd FileType html,css imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 let g:user_emmet_expandabbr_key='<C-Space>'
 
@@ -161,7 +157,7 @@ tnoremap <silent> jk <C-\><C-n>
 noremap <silent> j gj
 noremap <silent> k gk
 
-nnoremap <cr> za
+" nnoremap <cr> za
 
 nnoremap <silent> <Up> 2<C-y>
 nnoremap <silent> <Down> 2<C-E>
@@ -237,7 +233,11 @@ noremap <silent> <leader>o :exec 'botright Ttoggle resize=' . g:term_height<cr>
 " General Settings                                           *general_settings*
 " -----------------------------------------------------------------------------
 
-autocmd BufNewFile,BufRead * setlocal formatoptions-=cro  " Disable adding comment character(s) on pressing o/O in normal mode or CR in insert mode
+augroup inline
+    au!
+    autocmd BufNewFile,BufRead * setlocal formatoptions-=cro  " Disable adding comment character(s) on pressing o/O in normal mode or CR in insert mode
+augroup end
+
 set lbr " ................................................. Don't break lines in the middle of a word
 set fsync " ............................................... Ensures that files are safely written
 set undofile " ............................................ Persist undo history after exiting
@@ -442,6 +442,7 @@ augroup end
 augroup python
     au!
     au InsertLeave,TextChanged *.py set foldmethod=expr
+    " au InsertLeave,TextChanged *.py normal zx
     autocmd CompleteDone * if !pumvisible() | pclose | endif
 augroup end
 
@@ -504,9 +505,16 @@ fun! Drop_GF()
     if bufloaded(cfile)
         exec 'drop ' . cfile
     else
-        wincmd k
+        " wincmd k
+        " exec 'rightbelow vs ' . cfile
         exec 'rightbelow vs ' . cfile
+        wincmd L
+        wincmd W
+        wincmd J
+        exec "normal z" . g:term_height . "\<CR>"
+        wincmd p
     endif
+    " botright vnew | wincmd W | wincmd J | wincmd p
 
     if linenumber
         exec linenumber
@@ -519,5 +527,8 @@ augroup terminal
     au BufEnter * if &buftype == 'terminal' |
                 \ nnoremap <silent><buffer> gF :call Drop_GF()<CR> |
                 \ nnoremap <silent><buffer> <C-W>F :call Drop_GF()<CR> |
+                \ endif
+    au BufRead * if &buftype != 'nofile' |
+                \ nnoremap <silent><buffer> <CR> za |
                 \ endif
 augroup end
