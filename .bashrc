@@ -145,3 +145,6 @@ export FZF_DEFAULT_COMMAND='fdfind --type f'
 
 source /usr/share/doc/fzf/examples/key-bindings.bash || echo fzf not installed
 source /usr/share/doc/fzf/examples/completion.bash || echo fzf not installed
+
+export GDPROJECTS='/mnt/c/Users/Tad/OneDrive/Documents/Godot'
+alias cdgd='cd $GDPROJECTS'

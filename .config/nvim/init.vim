@@ -14,6 +14,14 @@
 packadd termdebug
 
 call plug#begin()
+Plug 'machakann/vim-highlightedyank'
+
+Plug 'habamax/vim-godot'
+Plug 'calviken/vim-gdscript3'
+Plug 'ervandew/supertab', {'for': 'gdscript3'}
+Plug 'jiangmiao/auto-pairs', {'for': 'gdscript3'}
+Plug 'ervandew/supertab'
+
 Plug 'kassio/neoterm'
 Plug 'szw/vim-maximizer'
 
@@ -91,8 +99,6 @@ Plug 'morhetz/gruvbox'
 Plug 'sainnhe/gruvbox-material'
 let g:gruvbox_material_palette = 'mix'
 
-" Plug 'jiangmiao/auto-pairs'
-
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 let g:NERDTreeWinPos = "right"
@@ -148,8 +154,6 @@ let @q = "f r@q"
 let mapleader = " "
 
 map Y y$
-
-nmap . .`[
 
 inoremap <silent> jk <esc>
 tnoremap <silent> jk <C-\><C-n>
@@ -334,9 +338,13 @@ omap ac <Plug>(coc-classobj-a)
 " Ctrl+p to show function signatrue in insert mode
 imap <silent> <C-f> <C-o>:call CocActionAsync('showSignatureHelp')<cr>
 
-" Use <TAB> to select the popup menu:
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+augroup inline
+    " Use <TAB> to select the popup menu:
+    au BufRead,BufNewFile * if &filetype != 'gdscript3' | inoremap <expr><buffer> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>" | endif
+    au BufRead,BufNewFile * if &filetype != 'gdscript3' | inoremap <expr><buffer> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>" | endif
+    au FileType gdscript3 CocDisable
+    " inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+augroup end
 nmap <silent> <leader>rn <Plug>(coc-rename)
 
 function! s:check_back_space() abort
@@ -461,12 +469,16 @@ augroup end
 
 augroup markdown
     au!
-    au BufRead,BufNewFile *.md setlocal colorcolumn=80
+    au BufRead,BufNewFile *.md setlocal textwidth=80 colorcolumn=+1
     au BufRead,BufNewFile *.md setlocal spell
     au BufRead,BufNewFile *.md setlocal complete+=kspell
+    au BufRead,BufNewFile *.md EmmetInstall
     " make the numbering for outlines ignored by spell checker
     au BufRead,BufNewFile *.md syn match OutlineNoSpell '\v^\s*[A-Za-z1-9]\.\s+' contains=@NoSpell
-    au BufRead,BufNewFile *.md CocDisable
+    " au BufRead,BufNewFile *.md CocDisable
+    au BufNew,BufEnter *.md silent! CocDisable
+    au BufLeave *.md silent! CocEnable
+    au InsertLeave,TextChanged *.md normal gwip
 augroup end
 
 augroup tags
@@ -482,7 +494,11 @@ augroup end
 
 augroup html
     au!
-    au FileType html setlocal lbr | setlocal breakindent | setlocal breakindentopt=shift:2
+    au FileType html setlocal lbr
+    au FileType html setlocal breakindent
+    au FileType html setlocal breakindentopt=shift:2
+    au FileType html setlocal nocursorline
+    au FileType html EmmetInstall
 augroup end
 
 augroup javascript
