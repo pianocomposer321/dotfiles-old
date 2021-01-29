@@ -1,0 +1,432 @@
+{ {
+    bufnr = 1,
+    changed = 1,
+    changedtick = 1175,
+    hidden = 0,
+    lastused = 1611418571,
+    linecount = 55,
+    listed = 1,
+    lnum = 47,
+    loaded = 1,
+    name = "/home/composer3/.config/nvim/lua/funcs/quickfix.lua",
+    variables = {
+      AutoPairs = {
+        ['"'] = '"',
+        ['"""'] = '"""',
+        ["'"] = "'",
+        ["'''"] = "'''",
+        ["("] = ")",
+        ["["] = "]",
+        ["`"] = "`",
+        ["```"] = "```",
+        ["{"] = "}"
+      },
+      AutoPairsList = { { "```", "```", {
+            key = "`",
+            mapclose = 1,
+            multiline = 0
+          } }, { "'''", "'''", {
+            key = "'",
+            mapclose = 1,
+            multiline = 0
+          } }, { '"""', '"""', {
+            key = '"',
+            mapclose = 1,
+            multiline = 0
+          } }, { "`", "`", {
+            key = "`",
+            mapclose = 1,
+            multiline = 0
+          } }, { '"', '"', {
+            key = '"',
+            mapclose = 1,
+            multiline = 0
+          } }, { "[", "]", {
+            key = "]",
+            mapclose = 1,
+            multiline = 1
+          } }, { "\\v(^|\\W)\\zs'", "'", {
+            key = "'",
+            mapclose = 1,
+            multiline = 0
+          } }, { "(", ")", {
+            key = ")",
+            mapclose = 1,
+            multiline = 1
+          } }, { "{", "}", {
+            key = "}",
+            mapclose = 1,
+            multiline = 1
+          } } },
+      AutoPairsMoveCharacter = "()[]{}\"'",
+      autopairs_defaultpairs = {
+        ['"'] = '"',
+        ['"""'] = '"""',
+        ["'"] = "'",
+        ["'''"] = "'''",
+        ["("] = ")",
+        ["["] = "]",
+        ["`"] = "`",
+        ["```"] = "```",
+        ["{"] = "}"
+      },
+      autopairs_enabled = 1,
+      autopairs_loaded = 1,
+      autopairs_return_pos = 0,
+      autopairs_saved_pair = { "(", { 0, 46, 38, 0 } },
+      changedtick = 1175,
+      completion_enable = 1,
+      current_syntax = "lua",
+      did_ftplugin = 1,
+      did_indent = 1,
+      git_dir = "/home/composer3/.git",
+      match_ignorecase = 0,
+      match_words = "\\<\\%(do\\|function\\|if\\)\\>:\\<\\%(return\\|else\\|elseif\\)\\>:\\<end\\>,\\<repeat\\>:\\<until\\>",
+      undo_ftplugin = "setlocal fo< com< cms< suffixesadd<"
+    },
+    windows = { 1000 }
+  }, {
+    bufnr = 6,
+    changed = 0,
+    changedtick = 4,
+    hidden = 1,
+    lastused = 1611413410,
+    linecount = 1360,
+    listed = 0,
+    lnum = 970,
+    loaded = 1,
+    name = "/usr/share/nvim/runtime/doc/motion.txt",
+    variables = {
+      AutoPairs = {
+        ['"'] = '"',
+        ['"""'] = '"""',
+        ["'"] = "'",
+        ["'''"] = "'''",
+        ["("] = ")",
+        ["["] = "]",
+        ["`"] = "`",
+        ["```"] = "```",
+        ["{"] = "}"
+      },
+      AutoPairsList = { { "```", "```", {
+            key = "`",
+            mapclose = 1,
+            multiline = 0
+          } }, { "'''", "'''", {
+            key = "'",
+            mapclose = 1,
+            multiline = 0
+          } }, { '"""', '"""', {
+            key = '"',
+            mapclose = 1,
+            multiline = 0
+          } }, { "`", "`", {
+            key = "`",
+            mapclose = 1,
+            multiline = 0
+          } }, { '"', '"', {
+            key = '"',
+            mapclose = 1,
+            multiline = 0
+          } }, { "[", "]", {
+            key = "]",
+            mapclose = 1,
+            multiline = 1
+          } }, { "\\v(^|\\W)\\zs'", "'", {
+            key = "'",
+            mapclose = 1,
+            multiline = 0
+          } }, { "(", ")", {
+            key = ")",
+            mapclose = 1,
+            multiline = 1
+          } }, { "{", "}", {
+            key = "}",
+            mapclose = 1,
+            multiline = 1
+          } } },
+      AutoPairsMoveCharacter = "()[]{}\"'",
+      autopairs_defaultpairs = {
+        ['"'] = '"',
+        ['"""'] = '"""',
+        ["'"] = "'",
+        ["'''"] = "'''",
+        ["("] = ")",
+        ["["] = "]",
+        ["`"] = "`",
+        ["```"] = "```",
+        ["{"] = "}"
+      },
+      autopairs_enabled = 1,
+      autopairs_loaded = 1,
+      autopairs_return_pos = 0,
+      autopairs_saved_pair = { 0, 0 },
+      changedtick = 4,
+      current_syntax = "help",
+      did_ftplugin = 1,
+      undo_ftplugin = "setl fo< tw< cole< cocu< keywordprg<"
+    },
+    windows = {}
+  }, {
+    bufnr = 7,
+    changed = 0,
+    changedtick = 4,
+    hidden = 1,
+    lastused = 1611413461,
+    linecount = 5357,
+    listed = 0,
+    lnum = 1329,
+    loaded = 1,
+    name = "/usr/share/nvim/runtime/doc/syntax.txt",
+    variables = {
+      AutoPairs = {
+        ['"'] = '"',
+        ['"""'] = '"""',
+        ["'"] = "'",
+        ["'''"] = "'''",
+        ["("] = ")",
+        ["["] = "]",
+        ["`"] = "`",
+        ["```"] = "```",
+        ["{"] = "}"
+      },
+      AutoPairsList = { { "```", "```", {
+            key = "`",
+            mapclose = 1,
+            multiline = 0
+          } }, { "'''", "'''", {
+            key = "'",
+            mapclose = 1,
+            multiline = 0
+          } }, { '"""', '"""', {
+            key = '"',
+            mapclose = 1,
+            multiline = 0
+          } }, { "`", "`", {
+            key = "`",
+            mapclose = 1,
+            multiline = 0
+          } }, { '"', '"', {
+            key = '"',
+            mapclose = 1,
+            multiline = 0
+          } }, { "[", "]", {
+            key = "]",
+            mapclose = 1,
+            multiline = 1
+          } }, { "\\v(^|\\W)\\zs'", "'", {
+            key = "'",
+            mapclose = 1,
+            multiline = 0
+          } }, { "(", ")", {
+            key = ")",
+            mapclose = 1,
+            multiline = 1
+          } }, { "{", "}", {
+            key = "}",
+            mapclose = 1,
+            multiline = 1
+          } } },
+      AutoPairsMoveCharacter = "()[]{}\"'",
+      autopairs_defaultpairs = {
+        ['"'] = '"',
+        ['"""'] = '"""',
+        ["'"] = "'",
+        ["'''"] = "'''",
+        ["("] = ")",
+        ["["] = "]",
+        ["`"] = "`",
+        ["```"] = "```",
+        ["{"] = "}"
+      },
+      autopairs_enabled = 1,
+      autopairs_loaded = 1,
+      autopairs_return_pos = 0,
+      autopairs_saved_pair = { 0, 0 },
+      changedtick = 4,
+      current_syntax = "help",
+      did_ftplugin = 1,
+      undo_ftplugin = "setl fo< tw< cole< cocu< keywordprg<"
+    },
+    windows = {}
+  }, {
+    bufnr = 10,
+    changed = 0,
+    changedtick = 2,
+    hidden = 0,
+    lastused = 1611413553,
+    linecount = 1,
+    listed = 1,
+    lnum = 0,
+    loaded = 1,
+    name = "/home/composer3/.config/nvim/quickfix-10",
+    variables = {
+      AutoPairs = {
+        ['"'] = '"',
+        ['"""'] = '"""',
+        ["'"] = "'",
+        ["'''"] = "'''",
+        ["("] = ")",
+        ["["] = "]",
+        ["`"] = "`",
+        ["```"] = "```",
+        ["{"] = "}"
+      },
+      AutoPairsList = { { "```", "```", {
+            key = "`",
+            mapclose = 1,
+            multiline = 0
+          } }, { "'''", "'''", {
+            key = "'",
+            mapclose = 1,
+            multiline = 0
+          } }, { '"""', '"""', {
+            key = '"',
+            mapclose = 1,
+            multiline = 0
+          } }, { "`", "`", {
+            key = "`",
+            mapclose = 1,
+            multiline = 0
+          } }, { '"', '"', {
+            key = '"',
+            mapclose = 1,
+            multiline = 0
+          } }, { "[", "]", {
+            key = "]",
+            mapclose = 1,
+            multiline = 1
+          } }, { "\\v(^|\\W)\\zs'", "'", {
+            key = "'",
+            mapclose = 1,
+            multiline = 0
+          } }, { "(", ")", {
+            key = ")",
+            mapclose = 1,
+            multiline = 1
+          } }, { "{", "}", {
+            key = "}",
+            mapclose = 1,
+            multiline = 1
+          } } },
+      AutoPairsMoveCharacter = "()[]{}\"'",
+      autopairs_defaultpairs = {
+        ['"'] = '"',
+        ['"""'] = '"""',
+        ["'"] = "'",
+        ["'''"] = "'''",
+        ["("] = ")",
+        ["["] = "]",
+        ["`"] = "`",
+        ["```"] = "```",
+        ["{"] = "}"
+      },
+      autopairs_enabled = 1,
+      autopairs_loaded = 1,
+      autopairs_return_pos = 0,
+      autopairs_saved_pair = { 0, 0 },
+      changedtick = 2,
+      current_syntax = "qf",
+      did_ftplugin = 1,
+      git_dir = "/home/composer3/.git",
+      undo_ftplugin = "set stl<"
+    },
+    windows = { 1008 }
+  }, {
+    bufnr = 13,
+    changed = 0,
+    changedtick = 3,
+    hidden = 0,
+    lastused = 1611413570,
+    linecount = 1,
+    listed = 0,
+    lnum = 1,
+    loaded = 0,
+    name = "/home/composer3/.config/nvim/lua/funcs/diagnostics.lua",
+    variables = {
+      changedtick = 3
+    },
+    windows = {}
+  }, {
+    bufnr = 15,
+    changed = 0,
+    changedtick = 4,
+    hidden = 0,
+    lastused = 1611418648,
+    linecount = 530,
+    listed = 0,
+    lnum = 354,
+    loaded = 1,
+    name = "/usr/share/nvim/runtime/doc/various.txt",
+    variables = {
+      AutoPairs = {
+        ['"'] = '"',
+        ['"""'] = '"""',
+        ["'"] = "'",
+        ["'''"] = "'''",
+        ["("] = ")",
+        ["["] = "]",
+        ["`"] = "`",
+        ["```"] = "```",
+        ["{"] = "}"
+      },
+      AutoPairsList = { { "```", "```", {
+            key = "`",
+            mapclose = 1,
+            multiline = 0
+          } }, { "'''", "'''", {
+            key = "'",
+            mapclose = 1,
+            multiline = 0
+          } }, { '"""', '"""', {
+            key = '"',
+            mapclose = 1,
+            multiline = 0
+          } }, { "`", "`", {
+            key = "`",
+            mapclose = 1,
+            multiline = 0
+          } }, { '"', '"', {
+            key = '"',
+            mapclose = 1,
+            multiline = 0
+          } }, { "[", "]", {
+            key = "]",
+            mapclose = 1,
+            multiline = 1
+          } }, { "\\v(^|\\W)\\zs'", "'", {
+            key = "'",
+            mapclose = 1,
+            multiline = 0
+          } }, { "(", ")", {
+            key = ")",
+            mapclose = 1,
+            multiline = 1
+          } }, { "{", "}", {
+            key = "}",
+            mapclose = 1,
+            multiline = 1
+          } } },
+      AutoPairsMoveCharacter = "()[]{}\"'",
+      autopairs_defaultpairs = {
+        ['"'] = '"',
+        ['"""'] = '"""',
+        ["'"] = "'",
+        ["'''"] = "'''",
+        ["("] = ")",
+        ["["] = "]",
+        ["`"] = "`",
+        ["```"] = "```",
+        ["{"] = "}"
+      },
+      autopairs_enabled = 1,
+      autopairs_loaded = 1,
+      autopairs_return_pos = 0,
+      autopairs_saved_pair = { 0, 0 },
+      changedtick = 4,
+      current_syntax = "help",
+      did_ftplugin = 1,
+      undo_ftplugin = "setl fo< tw< cole< cocu< keywordprg<"
+    },
+    windows = { 1012 }
+  } }
