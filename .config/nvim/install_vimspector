@@ -1,4 +1,0 @@
-#!/bin/bash
-
-mkdir -p $HOME/.config/nvim/pack
-curl -L https://github.com/puremourning/vimspector/releases/download/1630/linux-596ea65ca629f305b403a15e3d7574700955775c.tar.gz --output vimspector.tar.gz

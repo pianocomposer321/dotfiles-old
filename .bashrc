@@ -80,7 +80,7 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
+    # alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
@@ -93,6 +93,7 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
+alias ls='ls -p'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
@@ -130,11 +131,13 @@ export NVM_DIR="$HOME/.nvm"
 alias cls="clear"
 alias python="python3"
 alias pip="pip3"
-alias nvim="~/.local/nvim/bin/nvim"
+# alias nvim="~/.local/nvim/bin/nvim"
 alias nload="nvim +LoadSession"
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias mkdir='mkdir -p'
 alias reload='source ~/.bashrc'
+alias dotfiles='nvim `/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME ls-tree -r master --name-only ~ | fzf`'
+alias ..="cd .."
 
 export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
 # export LIBGL_ALWAYS_INDIRECT=1
